@@ -51,8 +51,8 @@ function Game(){
     setXIsNext((step%2) === 0);
   }
   const moves = history.map((step, move) => {
-    const xv = ((vector[move-1] % 3 | 0) +1);
-    const yv = ((vector[move-1] / 3 | 0) +1);
+    const xv = ((vector[move-1] % 3 | 0) +1);//追加した定数
+    const yv = ((vector[move-1] / 3 | 0) +1);//追加した定数
     const desc = move ? 'Go to move #' + move +  ' ：'+ ((move % 2 )? 'X' : 'O' )+ '( ' + xv+ ', ' + yv + ')':'Go to game start'; 
     return (
       <li key={move}>
